@@ -21,5 +21,5 @@ source ~/docker/ubuntu1804/ssh_setup.sh
 ### 使用ssh
 EX:ssh -p 52022 root@IP
 ### 安裝tensorflow2
-source ~/docker/ubuntu1804/tf2_setup.sh  
+source ~/docker/ubuntu1804/tf_make.sh  
 使用後要入jupyter notebook所需密碼
