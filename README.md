@@ -1,4 +1,4 @@
-## docker 
+# DOCKER  
 # 創建contariner  
 創完會以root身分登入  
 sudo nvidia-docker run -it --name (NAME) -p (B):22 -p (A):8888 nvidia/cuda:10.0-cudnn7-devel-ubuntu18.04  
