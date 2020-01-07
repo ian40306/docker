@@ -13,12 +13,11 @@ EX:sudo nvidia-docker run -it --name ian -p 52022:22 -p 7500:8888 nvidia/cuda:10
 sudo docker start -i (NAME)
   
 ## 結束contariner  
-exit  
-## 其他  
-### ubuntu18.04  
-#### ssh
-##### 安裝ssh
+exit   
+## ubuntu18.04  
+### ssh
+#### 安裝ssh
 source ~/docker/ubuntu1804/ssh_setup.sh  
 使用後要輸入ssh所需密碼  
-##### 使用ssh
+#### 使用ssh
 EX:ssh -p 52022 root@IP
