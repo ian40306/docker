@@ -8,12 +8,12 @@ A為開啟jupyter notebook的port
 B為遠端ssh 的port  
   
 EX:sudo nvidia-docker run -it --name ian -p 52022:22 -p 7500:8888 nvidia/cuda:10.0-cudnn7-devel-ubuntu18.04  
-  
 ## 啟動contariner  
 sudo docker start -i (NAME)
-  
 ## 結束contariner  
-exit   
+exit
+## 資料傳輸
+使用filezilla
 ## ubuntu18.04  
 ### ssh
 #### 安裝ssh
