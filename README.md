@@ -16,6 +16,9 @@ sudo docker start -i (NAME)
 exit  
 ## 其他  
 ### ubuntu18.04  
-#### 安裝ssh
+#### ssh
+##### 安裝ssh
 source ~/docker/ubuntu1804/ssh_setup.sh  
-使用後要輸入ssh所需密碼
+使用後要輸入ssh所需密碼  
+##### 使用ssh
+EX:ssh -p 52022 root@IP
