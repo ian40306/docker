@@ -23,3 +23,5 @@ EX:ssh -p 52022 root@IP
 ### 安裝tensorflow2-GPU
 source ~/docker/ubuntu1804/tf_make.sh  
 使用後要入jupyter notebook所需密碼
+### 開啟jupyter notebook
+jupyter notebook --ip=0.0.0.0 --allow-root
