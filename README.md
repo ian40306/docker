@@ -15,13 +15,11 @@ exit
 ## 資料傳輸
 使用filezilla
 ## ubuntu18.04  
-### ssh
-#### 安裝ssh
+### 安裝ssh
 source ~/docker/ubuntu1804/ssh_setup.sh  
 使用後要輸入ssh所需密碼  
-#### 使用ssh
+### 使用ssh
 EX:ssh -p 52022 root@IP
-### tensorflow2
-#### 安裝tensorflow2
+### 安裝tensorflow2
 source ~/docker/ubuntu1804/tf2.sh  
 使用後要入jupyter notebook所需密碼
