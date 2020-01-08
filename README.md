@@ -57,7 +57,24 @@ $exit
 ## 遠端程式
 使用vscode 或者 mobaxterm
 ## docker file
-
+註:需先申請docker hub帳號  
+### 建立dockerfile
+$mkdir docker-test && cd docker-test  
+### 編輯dockerfile
+vim Dockerfile
+EX: 請參考Dockerfile  
+指令介紹:  
+  
+FROM：使用到的 Docker Image 名稱  
+MAINTAINER： 用來說明，撰寫和維護這個 Dockerfile 的人是誰，也可以給 E-mail的資訊  
+RUN： RUN 指令後面放 Linux 指令，用來執行安裝和設定這個 Image 需要的東西  
+ADD： 把 Local 的檔案複製到 Image 裡，如果是 tar.gz 檔複製進去 Image 時會順便自動解壓縮。  
+ENV： 用來設定環境變數  
+CMD： 在指行 docker run 的指令時會直接呼叫開啟 Tomcat Service  
+### 把 Docker Image Push 到 Docker Hub 裡
+sudo docker build -t="your-name/image-name" . --no-cache  
+sudo docker login
+sudo docker push your-name/image-name  
 ## ubuntu18.04
 ### 安裝git
 $apt-get update  
