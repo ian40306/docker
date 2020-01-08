@@ -61,7 +61,7 @@ $exit
 ### 建立dockerfile
 $mkdir docker-test && cd docker-test  
 ### 編輯dockerfile
-vim Dockerfile
+vim Dockerfile  
 EX: 請參考docker_file/docker_cuda10.0-cudnn7-devel-ubuntu18.04_basic/Dockerfile   
 指令介紹:  
   
