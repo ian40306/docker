@@ -23,15 +23,16 @@ $cat /usr/include/cudnn.h | grep CUDNN_MAJOR -A 2
 註:若失敗則重安裝
 ## 安裝docker
 $sudo apt-get update  
-$sudo apt-get install apt-transport-https ca-certificates curl gnupg-agent software-properties-common  
+$sudo apt-get install apt-transport-https ca-certificates curl gnupg-agent software-properties-common -y  
 $curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -  
 $sudo apt-key fingerprint 0EBFCD88  
 $sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable"  
 $sudo apt-get update  
-$sudo apt-get install docker-ce docker-ce-cli containerd.io  
+$sudo apt-get install docker-ce docker-ce-cli containerd.io -y  
 $apt-cache madison docker-ce  
 $sudo apt-get install docker-ce=<VERSION_STRING> docker-ce-cli=<VERSION_STRING> containerd.io  
 註:<VERSION_STRING>版本請依照所需  
+EX: sudo apt-get install docker-ce=5:19.03.5~3-0~ubuntu-bionic docker-ce-cli=5:19.03.5~3-0~ubuntu-bionic containerd.io  
   
 $distribution=$(. /etc/os-release;echo $ID$VERSION_ID)  
 $curl -s -L https://nvidia.github.io/nvidia-docker/gpgkey | sudo apt-key add -  
