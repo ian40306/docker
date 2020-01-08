@@ -6,3 +6,4 @@ echo ""
 echo "Please enter the ssh password"
 echo ""
 passwd
+systemctl enable ssh
