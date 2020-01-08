@@ -51,7 +51,7 @@ git clone https://github.com/ian40306/docker.git
 ### 安裝ssh
 source ~/docker/ubuntu1804/ssh_setup.sh  
 使用後要輸入ssh所需密碼  
-### 使用ssh
+### 使用ssh登入
 EX:ssh -p 52022 root@IP
 ### 安裝tensorflow2-GPU
 source ~/docker/ubuntu1804/tf_make.sh  
