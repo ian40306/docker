@@ -1,4 +1,31 @@
 # DOCKER  
+## 安裝nvidia driver
+sudo apt-get install gcc  
+sudo apt-get install make  
+sudo service gdm3 stop  
+reboot  
+  
+sudo add-apt-repository ppa:graphics-drivers/ppa  
+sudo apt-get update  
+ubuntu-drivers devices  
+sudo apt-get install nvidia-driver-<VERSION_STRING>  
+sudo service gdm3 start  
+reboot  
+註:<VERSION_STRING>版本請依照所需  
+  
+nvidia-smi  
+註:若失敗則重安裝  
+## 安裝docker
+sudo apt-get update  
+sudo apt-get install apt-transport-https ca-certificates curl gnupg-agent software-properties-common  
+curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -  
+sudo apt-key fingerprint 0EBFCD88  
+sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable"  
+sudo apt-get update  
+sudo apt-get install docker-ce docker-ce-cli containerd.io  
+apt-cache madison docker-ce  
+sudo apt-get install docker-ce=<VERSION_STRING> docker-ce-cli=<VERSION_STRING> containerd.io  
+註:<VERSION_STRING>版本請依照所需  
 ## 創建contariner  
 創完會以root身分登入  
 sudo docker run --gpus all -it --name (NAME) -p (B):22 -p (A):8888 nvidia/cuda:10.0-cudnn7-devel-ubuntu18.04  
