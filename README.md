@@ -16,11 +16,11 @@ exit
 使用filezilla
 ## ubuntu18.04
 ### 安裝git
-apt-get update
-apt-get upgrade
+apt-get update  
+apt-get upgrade  
 apt-get install git
 ### 下載相關安裝檔
-git clone 
+git clone https://github.com/ian40306/docker.git
 ### 安裝ssh
 source ~/docker/ubuntu1804/ssh_setup.sh  
 使用後要輸入ssh所需密碼  
