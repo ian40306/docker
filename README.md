@@ -12,9 +12,15 @@ $sudo apt-get install nvidia-driver-<VERSION_STRING>
 $sudo service gdm3 start  
 $reboot  
 註:<VERSION_STRING>版本請依照所需  
-  
+### 驗證安裝
 $nvidia-smi  
+$cat /usr/local/cuda/version.txt  
+$nvcc -V  
+$cat /usr/local/cuda/include/cudnn.h | grep CUDNN_MAJOR -A 2  
+or  
+$cat /usr/include/cudnn.h | grep CUDNN_MAJOR -A 2  
 註:若失敗則重安裝
+
 ## 安裝docker
 $sudo apt-get update  
 $sudo apt-get install apt-transport-https ca-certificates curl gnupg-agent software-properties-common  
