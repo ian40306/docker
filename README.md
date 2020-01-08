@@ -54,6 +54,10 @@ $sudo docker start -i (NAME)
 $exit
 ## 資料傳輸
 使用filezilla
+## 遠端程式
+使用vscode 或者 mobaxterm
+## docker file
+
 ## ubuntu18.04
 ### 安裝git
 $apt-get update  
