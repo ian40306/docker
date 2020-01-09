@@ -49,6 +49,7 @@ B為遠端ssh 的port
 container請自行至docker_file內選擇  
   
 EX:sudo docker run --gpus all -it --name ian -p 52022:22 -p 7500:8888 ian40306/cuda10.0-cudnn7-devel-ubuntu18.04-tf1.14  
+相關使用方式請至下方ubuntu18.04查詢
 ## 啟動contariner  
 $sudo docker start -i (NAME)
 ## 結束contariner  
@@ -77,6 +78,10 @@ sudo docker build -t="your-name/image-name" . --no-cache
 sudo docker login  
 sudo docker push your-name/image-name  
 ## ubuntu18.04
+### 密碼設定
+passwd
+### jupyter notebook密碼設定
+jupyter notebook password
 ### 安裝git
 $apt-get update  
 $apt-get upgrade  
