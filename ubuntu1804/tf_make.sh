@@ -15,7 +15,7 @@ jupyter notebook --generate-config
 apt-get install vim -y
 #install tensorflow gpu
 pip install tensorflow-gpu
-python3 -c "import tensorflow as tf; print('Your tensorflow version:'); print(tf.__version__))"
+python3 -c "import tensorflow as tf; print('Your tensorflow version:'); print(tf.__version__)"
 
 echo ""
 echo "Please enter the jupyter notebook password"
