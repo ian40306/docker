@@ -73,7 +73,7 @@ ENV： 用來設定環境變數
 CMD： 在指行 docker run 的指令時會直接呼叫開啟 Tomcat Service  
 ### 把 Docker Image Push 到 Docker Hub 裡
 sudo docker build -t="your-name/image-name" . --no-cache  
-sudo docker login
+sudo docker login  
 sudo docker push your-name/image-name  
 ## ubuntu18.04
 ### 安裝git
