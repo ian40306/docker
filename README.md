@@ -48,7 +48,7 @@ A為開啟jupyter notebook的port
 B為遠端ssh 的port  
 container請自行至docker_file內選擇  
   
-EX:sudo docker run --gpus all -it --name ian -p 52022:22 -p 7500:8888 ian40306/cuda10.0-cudnn7-devel-ubuntu18.04-tf1.14  
+EX:sudo docker run --gpus all -it --name ian -p 52022:22 -p 7500:8888 ian40306/cuda10.0-cudnn7-devel-ubuntu18.04-tf1.14.0  
 相關使用方式請至下方ubuntu18.04查詢
 ## 啟動contariner  
 $sudo docker start -i (NAME)
