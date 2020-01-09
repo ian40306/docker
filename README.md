@@ -32,7 +32,7 @@ $sudo apt-get install docker-ce docker-ce-cli containerd.io -y
 $apt-cache madison docker-ce  
 $sudo apt-get install docker-ce=<VERSION_STRING> docker-ce-cli=<VERSION_STRING> containerd.io  
 註:<VERSION_STRING>版本請依照所需  
-EX: sudo apt-get install docker-ce=5:19.03.5~3-0~ubuntu-bionic docker-ce-cli=5:19.03.5~3-0~ubuntu-bionic containerd.io  
+EX: sudo apt-get install docker-ce=5:19.03.5\~3-0\~ubuntu-bionic docker-ce-cli=5:19.03.5\~3-0\~ubuntu-bionic containerd.io  
   
 $distribution=$(. /etc/os-release;echo $ID$VERSION_ID)  
 $curl -s -L https://nvidia.github.io/nvidia-docker/gpgkey | sudo apt-key add -  
