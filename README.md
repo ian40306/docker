@@ -98,3 +98,6 @@ $source ~/docker/ubuntu1804/tf_make.sh
 使用後要入jupyter notebook所需密碼
 ### 開啟jupyter notebook
 $jupyter notebook --ip=0.0.0.0 --allow-root
+### 指定GPU
+CUDA_VISIBLE_DEVICES=(number)  
+number為第幾張GPU
