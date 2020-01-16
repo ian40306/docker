@@ -71,7 +71,7 @@ $exit
 $mkdir docker-test && cd docker-test  
 ### 編輯dockerfile
 vim Dockerfile  
-EX: 請參考docker_file/docker_cuda10.0-cudnn7-devel-ubuntu18.04_basic/Dockerfile   
+EX: 請參考docker_file/ian40306_cuda10.0-cudnn7-devel-ubuntu18.04_basic/Dockerfile   
 指令介紹:  
   
 FROM：使用到的 Docker Image 名稱  
