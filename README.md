@@ -41,14 +41,14 @@ $sudo apt-get update && sudo apt-get install -y nvidia-container-toolkit
 $sudo systemctl restart docker
 ## 創建contariner  
 創完會以root身分登入  
-$sudo docker run --gpus all -it --name (NAME) -p (B):22 -p (A):8888 (container)  
+$sudo docker run --gpus all -it --name (NAME) -p (B):22 -p (A):8888 (image)  
   
 NAME、A、B為自取(將NAME取代成想要的名子，A取代為想要的port(不是改8888))  
 A為開啟jupyter notebook的port  
 B為遠端ssh 的port  
-container請從下方表格選擇  
+image請從下方表格選擇  
   
-| container name | 安裝的程式 | 說明 |  
+| image name | 安裝的程式 | 說明 |  
 |:---:|:---:|:---:|  
 | nvidia/cuda:10.0-cudnn7-devel-ubuntu18.04 | cuda10.0、cudnn7、ubuntu18.04 | 基本ubuntu18，且已安裝cuda10、cudnn7 |  
 | ian40306/cuda10.0-cudnn7-devel-ubuntu18.04 | cuda10.0、cudnn7、ubuntu18.04、openssh-server、python3、python3-pip、vim、wget、git、libcupti-dev、iputils-ping、curl | ubuntu18，安裝cuda10、cudnn7、並加上ssh遠端以及一些基本程式(ssh登入前須設定密碼) |  
