@@ -52,6 +52,7 @@ image請從下方表格選擇
 |:---:|:---:|:---:|  
 | nvidia/cuda:10.0-cudnn7-devel-ubuntu18.04 | cuda10.0、cudnn7、ubuntu18.04 | 基本ubuntu18，且已安裝cuda10、cudnn7 |  
 | nvidia/cuda:10.0-cudnn7-devel-ubuntu16.04 | cuda10.0、cudnn7、ubuntu16.04 | 基本ubuntu16，且已安裝cuda10、cudnn7 |  
+| ian40306/u18_nvidia_x11_basic | cuda10.0、cudnn7、ubuntu18.04、openssh-server、python3、python3-pip、vim、wget、git、libcupti-dev、iputils-ping、curl、dbus-x11 | 基本ubuntu18，且已安裝cuda10、cudnn7、ssh遠端以及一些基本程式(ssh密碼為12345678，可直接遠端) |  
 | ian40306/cuda10.0-cudnn7-devel-ubuntu18.04 | cuda10.0、cudnn7、ubuntu18.04、openssh-server、python3、python3-pip、vim、wget、git、libcupti-dev、iputils-ping、curl | ubuntu18，安裝cuda10、cudnn7、並加上ssh遠端以及一些基本程式(ssh登入前須設定密碼) |  
 | ian40306/cuda10.0-cudnn7-devel-ubuntu18.04-tf1.14.0 | cuda10.0、cudnn7、ubuntu18.04、openssh-server、python3、python3-pip、vim、wget、git、libcupti-dev、iputils-ping、curl、tensorflow-gpu1.14、jupyter、matplotlib、pillow、lxml、pandas、Cython、opencv-python、openpyxl | ubuntu18，安裝cuda10、cudnn7、ssh遠端以及一些基本程式(ssh登入前須設定密碼)、tensorflow14.0以及一些相關python函式庫、jupyter notebook(登入後須設定密碼) |  
 | ian40306/ubuntu18.04-nvidia-x11-tf1.14 | cuda10.0、cudnn7、ubuntu18.04、openssh-server、python3、python3-pip、vim、wget、git、libcupti-dev、iputils-ping、curl、tensorflow-gpu1.14、jupyter、matplotlib、pillow、lxml、pandas、Cython、opencv-python、openpyxl、dbus-x11、firefox | ubuntu18，安裝cuda10、cudnn7、ssh遠端以及一些基本程式(ssh密碼為12345678，可直接遠端)、tensorflow14.0以及一些相關python函式庫、jupyter notebook(登入後須設定密碼)、使用mobaxterm可叫出畫面 |  
