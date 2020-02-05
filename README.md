@@ -39,7 +39,7 @@ $curl -s -L https://nvidia.github.io/nvidia-docker/gpgkey | sudo apt-key add -
 $curl -s -L https://nvidia.github.io/nvidia-docker/$distribution/nvidia-docker.list | sudo tee /etc/apt/sources.list.d/nvidia-docker.list  
 $sudo apt-get update && sudo apt-get install -y nvidia-container-toolkit  
 $sudo systemctl restart docker
-## 創建contariner  
+## 創建container  
 創完會以root身分登入  
 $sudo docker run --gpus all -it --name (NAME) -p (B):22 -p (A):8888 (image)  
   
@@ -59,9 +59,9 @@ image請從下方表格選擇
   
 EX:sudo docker run --gpus all -it --name ian -p 52022:22 -p 7500:8888 ian40306/cuda10.0-cudnn7-devel-ubuntu18.04-tf1.14.0  
 相關使用方式請至下方ubuntu18.04查詢
-## 啟動contariner  
+## 啟動container  
 $sudo docker start -i (NAME)
-## 結束contariner  
+## 結束container  
 $exit
 ## 資料傳輸
 使用filezilla
