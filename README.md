@@ -127,4 +127,6 @@ $pip3 install http://download.pytorch.org/whl/cu100/torch-1.0.0-cp36-cp36m-linux
 $pip3 install torchvision  
 ### 安裝jupyter lab
 pip install jupyterlab  
-/root/.jupyter/jupyter_notebook_config.py 新增c.NotebookApp.terminado_settings = { 'shell_command': ['bash'] }
+/root/.jupyter/jupyter_notebook_config.py 新增c.NotebookApp.terminado_settings = { 'shell_command': ['bash'] }  
+開啟:  
+CUDA_VISIBLE_DEVICES=1 jupyter lab --ip=0.0.0.0 --allow-root 
