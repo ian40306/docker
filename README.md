@@ -125,6 +125,9 @@ $screen -r (number)
 ### 安裝pytorch
 $pip3 install http://download.pytorch.org/whl/cu100/torch-1.0.0-cp36-cp36m-linux_x86_64.whl  
 $pip3 install torchvision  
+查詢版本:  
+import torch  
+print(torch.__version__)  
 ### 安裝jupyter lab
 pip install jupyterlab  
 /root/.jupyter/jupyter_notebook_config.py 新增c.NotebookApp.terminado_settings = { 'shell_command': ['bash'] }  
