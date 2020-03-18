@@ -122,9 +122,8 @@ $sudo apt install screen
 $screen -ls  
 切換screen介面  
 $screen -r (number)  
-### 安裝pytorch
-$pip3 install http://download.pytorch.org/whl/cu100/torch-1.0.0-cp36-cp36m-linux_x86_64.whl  
-$pip3 install torchvision  
+### 安裝pytorch1.0.0
+$pip install pytorch==1.0.0 torchvision==0.2.1  
 查詢版本:  
 import torch  
 print(torch.__version__)  
