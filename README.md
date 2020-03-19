@@ -123,7 +123,7 @@ $screen -ls
 切換screen介面  
 $screen -r (number)  
 ### 安裝pytorch1.0.0
-$pip install pytorch==1.0.0 torchvision==0.2.1  
+$pip install torch==1.0.0 torchvision==0.2.1  
 查詢版本:  
 import torch  
 print(torch.__version__)  
