@@ -136,4 +136,8 @@ CUDA_VISIBLE_DEVICES=1 jupyter lab --ip=0.0.0.0 --allow-root
 tensorflow:  
 $python3 -c "import tensorflow as tf;print('Can your tensorflow use GPU?');print(tf.test.is_gpu_available());"  
 pytorch:  
-$python3 -c "import torch as t;print('Can your pytorch use GPU?');print(t.cuda.is_available());"
+$python3 -c "import torch as t;print('Can your pytorch use GPU?');print(t.cuda.is_available());"  
+### 安裝Anaconda
+wget https://repo.anaconda.com/archive/Anaconda3-2020.02-Linux-x86_64.sh  
+sh Anaconda3-2020.02-Linux-x86_64.sh  
+export PATH=~/anaconda3/bin:$PATH  
