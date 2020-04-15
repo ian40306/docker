@@ -145,3 +145,29 @@ $export PATH=~/anaconda3/bin:$PATH
 $sudo apt install -y landscape-common  
 手動看訊息:  
 $landscape-sysinfo
+### ubuntu 硬碟掛載相關
+安裝程式:  
+$sudo apt-get install parted  
+開啟程式:  
+$sudo parted  
+切換硬碟:  
+(parted)select /dev/sdb  
+印出硬碟資訊:  
+(parted)print  
+磁碟分割:  
+(parted)mklabel gpt  
+確認無誤之後按y  
+建立磁碟分割區大小資訊:  
+(parted)mkpart primary 0.00TB 3.00TB  
+檢查建立是否正確:  
+(parted)print  
+離開parted:  
+(parted)quit  
+將新分割區格式化:  
+$mkfs.ext4 /dev/sdb1  
+查詢硬碟之UUID:  
+$sudo blkid  
+掛載:  
+$mkdir /data  
+$mount /dev/sdb1 /data  
+$echo "UUID=4c025e0d-0303-4ba5-9b46-cdb4fc170926 /data          ext4    defaults        0       2" >> /etc/fstab
