@@ -138,6 +138,10 @@ $python3 -c "import tensorflow as tf;print('Can your tensorflow use GPU?');print
 pytorch:  
 $python3 -c "import torch as t;print('Can your pytorch use GPU?');print(t.cuda.is_available());"  
 ### 安裝Anaconda
-wget https://repo.anaconda.com/archive/Anaconda3-2020.02-Linux-x86_64.sh  
-sh Anaconda3-2020.02-Linux-x86_64.sh  
-export PATH=~/anaconda3/bin:$PATH  
+$wget https://repo.anaconda.com/archive/Anaconda3-2020.02-Linux-x86_64.sh  
+$sh Anaconda3-2020.02-Linux-x86_64.sh  
+$export PATH=~/anaconda3/bin:$PATH  
+### 登入看見一些相關資訊
+$sudo apt install -y landscape-common  
+手動看訊息:  
+$landscape-sysinfo
