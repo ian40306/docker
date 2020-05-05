@@ -77,7 +77,7 @@ $exit
 ### 建立dockerfile
 $mkdir docker-test && cd docker-test  
 ### 編輯dockerfile
-vim Dockerfile  
+$vim Dockerfile  
 EX: 請參考docker_file/ian40306_cuda10.0-cudnn7-devel-ubuntu18.04_basic/Dockerfile   
 指令介紹:  
   
@@ -88,9 +88,17 @@ ADD： 把 Local 的檔案複製到 Image 裡，如果是 tar.gz 檔複製進去
 ENV： 用來設定環境變數  
 CMD： 在指行 docker run 的指令時會直接呼叫開啟 Tomcat Service  
 ### 把 Docker Image Push 到 Docker Hub 裡
-sudo docker build -t="your-name/image-name" . --no-cache  
-sudo docker login  
-sudo docker push your-name/image-name  
+$sudo docker build -t="your-name/image-name" . --no-cache  
+$sudo docker login  
+$sudo docker push your-name/image-name  
+### 更改docker儲存位置
+$sudo vim /lib/systemd/system/docker.service  
+將14行改成如下(目標資料夾為/home/docker)  
+ExecStart=/usr/bin/dockerd --data-root /home/docker -s overlay2 -H fd:// --containerd=/run/containerd/containerd.sock  
+ExecReload=/bin/kill -s HUP $MAINPID  
+儲存後輸入:  
+$sudo systemctl daemon-reload  
+$sudo service docker restart  
 ## ubuntu18.04
 ### 密碼設定
 passwd
@@ -128,10 +136,10 @@ $pip install torch==1.0.0 torchvision==0.2.1
 import torch  
 print(torch.__version__)  
 ### 安裝jupyter lab
-pip install jupyterlab  
+$pip install jupyterlab  
 /root/.jupyter/jupyter_notebook_config.py 新增c.NotebookApp.terminado_settings = { 'shell_command': ['bash'] }  
 開啟:  
-CUDA_VISIBLE_DEVICES=1 jupyter lab --ip=0.0.0.0 --allow-root 
+$CUDA_VISIBLE_DEVICES=1 jupyter lab --ip=0.0.0.0 --allow-root 
 ### 確認GPU是否支援
 tensorflow:  
 $python3 -c "import tensorflow as tf;print('Can your tensorflow use GPU?');print(tf.test.is_gpu_available());"  
@@ -145,6 +153,8 @@ $export PATH=~/anaconda3/bin:$PATH
 $sudo apt install -y landscape-common  
 手動看訊息:  
 $landscape-sysinfo
+### 資料大小查詢
+$du -d 1 -h  
 ### ubuntu 硬碟掛載相關
 安裝程式:  
 $sudo apt-get install parted  
