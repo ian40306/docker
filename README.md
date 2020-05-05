@@ -61,7 +61,7 @@ image請從下方表格選擇
   
 EX:sudo docker run --gpus all -it --name ian -p 52022:22 -p 7500:8888 ian40306/u18-n10.0-c7.6.5-tf1.15.0-x11  
 相關使用方式請至下方ubuntu18.04查詢  
-推薦container:  
+推薦:  
 ian40306/u18-n10.0-c7.6.5-x11-basic  
 ian40306/u18-n10.0-c7.6.5-tf1.15.0-x11
 ## 啟動container  
