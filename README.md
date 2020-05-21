@@ -180,3 +180,5 @@ $sudo blkid
 $mkdir /data  
 $mount /dev/sdb1 /data  
 $echo "UUID=4c025e0d-0303-4ba5-9b46-cdb4fc170926 /data          ext4    defaults        0       2" >> /etc/fstab
+### 資料夾底下有多少資料
+$find \*.jpg -type f |wc -l
