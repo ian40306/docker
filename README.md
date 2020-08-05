@@ -133,7 +133,8 @@ $screen -r (number)
 ### 安裝pytorch1.0.0
 $pip install torch==1.0.0 torchvision==0.2.1  
 查詢版本:  
-python3 -c "import torch;print('Your pytorch version is:');print(torch."__"version"__");"  
+python3 -c "import torch;print('Your pytorch version is:');print(torch.__version__);"  
+備註:version前後要加兩個底線_
 ### 安裝jupyter lab
 $pip install jupyterlab  
 /root/.jupyter/jupyter_notebook_config.py 新增c.NotebookApp.terminado_settings = { 'shell_command': ['bash'] }  
