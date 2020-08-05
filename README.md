@@ -182,6 +182,8 @@ $mount /dev/sdb1 /data
 $echo "UUID=4c025e0d-0303-4ba5-9b46-cdb4fc170926 /data          ext4    defaults        0       2" >> /etc/fstab
 ### 資料夾底下有多少資料
 $find \*.jpg -type f |wc -l
+### 當前路徑中所有目錄所佔用大小做統計並且排序
+$du -chd 1 | sort -h
 ### 下載google drive檔案
 $wget --no-check-certificate -r 'https://docs.google.com/uc?export=download&id=[ID]' -O Filename  
 -r 為資料夾(壓縮檔)，ID為google drive提供，Filename要與原檔案符合
