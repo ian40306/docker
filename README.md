@@ -60,7 +60,7 @@ image請從下方表格選擇
 | ian40306/u18-n10.0-c7.6.5-tf1.15.0-x11 | cuda10.0、cudnn7.6.5、ubuntu18.04、openssh-server、python3、python3-pip、vim、wget、git、libcupti-dev、iputils-ping、curl、tensorflow-gpu1.15、jupyter、matplotlib、pillow、lxml、pandas、Cython、opencv-python、openpyxl、dbus-x11、firefox、screen | ubuntu18，安裝cuda10、cudnn7.6.5、ssh遠端以及一些基本程式(ssh密碼為12345678，可直接遠端)、tensorflow1.15以及一些相關python函式庫、jupyter notebook(登入後須設定密碼)、使用mobaxterm可叫出畫面、可使用screen |  
   
 EX:sudo docker run --gpus all -it --name ian -p 52022:22 -p 7500:8888 ian40306/u18-n10.0-c7.6.5-tf1.15.0-x11  
-相關使用方式請至下方ubuntu18.04查詢  
+相關使用方式請至[ubuntu1804](https://github.com/ian40306/docker/tree/master/ubuntu1804 "link")查詢  
 推薦:  
 ian40306/u18-n10.0-c7.6.5-x11-basic  
 ian40306/u18-n10.0-c7.6.5-tf1.15.0-x11
