@@ -100,6 +100,7 @@ ExecReload=/bin/kill -s HUP $MAINPID
 $sudo systemctl daemon-reload  
 $sudo service docker restart  
 ## ubuntu18.04
+相關使用方式移至[ubuntu1804](https://github.com/ian40306/docker/tree/master/ubuntu1804 "link")
 ### 密碼設定
 passwd
 ### jupyter notebook密碼設定
