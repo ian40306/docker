@@ -100,8 +100,8 @@ import warnings
 warnings.filterwarnings("ignore")
 ## 壓縮/解壓縮
 ### tar
-$tar cvf FileName.tar DirName
+$tar cvf FileName.tar DirName  
 $tar xvf FileName.tar
 ### zip
-$zip -r FileName.zip DirName
+$zip -r FileName.zip DirName  
 $unzip FileName.zip
