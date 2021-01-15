@@ -41,11 +41,12 @@ $sudo apt-get update && sudo apt-get install -y nvidia-container-toolkit
 $sudo systemctl restart docker
 ## 創建container  
 創完會以root身分登入  
-$sudo docker run --gpus all -it --name (NAME) -p (B):22 -p (A):8888 (image)  
+$sudo docker run --gpus all -it --name (NAME) --shm-size 1G --ipc=host -p (B):22 -p (A):8888 -p (C):6006 (image)  
   
-NAME、A、B為自取(將NAME取代成想要的名子，A取代為想要的port(不是改8888))  
+NAME、A、B、C為自取(將NAME取代成想要的名子，A取代為想要的port(不是改8888))  
 A為開啟jupyter notebook的port  
-B為遠端ssh 的port  
+B為遠端ssh 的port
+C為開啟tensorboard的port  
 image請從下方表格選擇  
   
 | image name | 安裝的程式 | 說明 |  
