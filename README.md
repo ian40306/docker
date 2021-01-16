@@ -3,14 +3,14 @@
 $sudo apt-get install gcc -y  
 $sudo apt-get install make  
 $sudo service gdm3 stop  
-$reboot  
+$sudo reboot  
   
 $sudo add-apt-repository ppa:graphics-drivers/ppa  
 $sudo apt-get update  
 $ubuntu-drivers devices  
 $sudo apt-get install nvidia-driver-<VERSION_STRING>  
 $sudo service gdm3 start  
-$reboot  
+$sudo reboot  
 註:<VERSION_STRING>版本請依照所需  
 ### 驗證安裝
 $nvidia-smi  
