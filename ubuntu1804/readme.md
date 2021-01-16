@@ -67,7 +67,7 @@ $sudo parted
 (parted)mklabel gpt  
 確認無誤之後按y  
 建立磁碟分割區大小資訊:  
-(parted)mkpart primary 0.00TB 3.00TB  
+(parted)mkpart (name) 0.00TB 3.00TB  
 檢查建立是否正確:  
 (parted)print  
 離開parted:  
@@ -79,7 +79,29 @@ $sudo blkid
 掛載:  
 $mkdir /data  
 $mount /dev/sdb1 /data  
-$echo "UUID=4c025e0d-0303-4ba5-9b46-cdb4fc170926 /data          ext4    defaults        0       2" >> /etc/fstab
+$echo "UUID=4c025e0d-0303-4ba5-9b46-cdb4fc170926 /data          ext4    defaults        0       2" >> /etc/fstab  
+# 使用lvm技術:  
+[硬碟部分](http://linux.vbird.org/linux_basic/0230filesystem.php#gdisk "link"):  
+卸載要使用的硬碟(會格式化):  
+$umount (dir)  
+切割欲使用硬碟:  
+$sudo gdisk /dev/sdb  
+查看硬碟資訊:  
+$p  
+刪除硬碟內分割槽:  
+$d  
+新增分割槽:  
+$n  
+[LVM部分](http://linux.vbird.org/linux_basic/0420quota.php#LVM "link"):  
+安裝LVM:  
+$sudo apt-get install lvm2 -y  
+1.pv階段:  
+| 指令 | 說明 |  
+|:---:|:---:|  
+| pvcreate | 將實體 partition 建立成為 PV |  
+| pvscan | 搜尋目前系統裡面任何具有 PV 的磁碟 |  
+| pvdisplay | 顯示出目前系統上面的 PV 狀態 |  
+| pvremove | 將 PV 屬性移除，讓該 partition 不具有 PV 屬性 |  
 ## 資料夾底下有多少資料
 $find . -name "*.jpg" -type f |wc -l
 ## 複製大量資料(test to train)
