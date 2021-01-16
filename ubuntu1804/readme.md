@@ -102,6 +102,51 @@ $sudo apt-get install lvm2 -y
 | pvscan | 搜尋目前系統裡面任何具有 PV 的磁碟 |  
 | pvdisplay | 顯示出目前系統上面的 PV 狀態 |  
 | pvremove | 將 PV 屬性移除，讓該 partition 不具有 PV 屬性 |  
+EX:  
+查詢pv:  
+$sudo pvscan  
+創立pv:  
+$sudo pvcreate /dev/sda1  
+2.VG 階段:  
+| 指令 | 說明 |  
+|:---:|:---:|  
+| vgcreate | 建立 VG |  
+| vgscan | 搜尋系統上面是否有 VG 存在 |  
+| vgdisplay | 顯示目前系統上面的 VG 狀態 |  
+| vgextend | 在 VG 內增加額外的 PV |  
+| vgreduce | 在 VG 內移除 PV |  
+| vgchange | 設定 VG 是否啟動 (active) |  
+| vgremove | 刪除一個 VG |  
+EX:  
+創立vg:  
+$sudo vgcreate (vg-name) /dev/sda1  
+查詢vg:  
+$sudo vgscan  
+3.LV 階段  
+| 指令 | 說明 |  
+|:---:|:---:|  
+| lvcreate | 建立 LV |  
+| lvscan | 查詢系統上面的 LV |  
+| lvdisplay | 顯示系統上面的 LV 狀態 |  
+| lvextend | 在 LV 裡面增加容量 |  
+| lvreduce | 在 LV 裡面減少容量 |  
+| lvremove | 刪除一個 LV |  
+| lvresize | 對 LV 進行容量大小的調整 |  
+EX:  
+新增lv:  
+$sudo lvcreate -L 2G -n (lv-name) (vg-name)  
+查詢lv:  
+$sudo lvscan  
+增大lv容量:  
+要先新增pv以及vg  
+$sudo lvresize -L +500M /dev/(vg-name)/(lv-name)  
+4.檔案系統階段  
+格式化:  
+$sudo mkfs.ext4 /dev/(vg-name)/(lv-name)  
+創立欲儲存資料夾:  
+$sudo mkdir (dir)  
+掛載:  
+$sudo mount /dev/(vg-name)/(lv-name) (dir)  
 ## 資料夾底下有多少資料
 $find . -name "*.jpg" -type f |wc -l
 ## 複製大量資料(test to train)
