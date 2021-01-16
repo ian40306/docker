@@ -80,7 +80,7 @@ $sudo blkid
 $mkdir /data  
 $mount /dev/sdb1 /data  
 $echo "UUID=4c025e0d-0303-4ba5-9b46-cdb4fc170926 /data          ext4    defaults        0       2" >> /etc/fstab  
-# 使用lvm技術:  
+### 使用lvm技術:  
 [硬碟部分](http://linux.vbird.org/linux_basic/0230filesystem.php#gdisk "link"):  
 卸載要使用的硬碟(會格式化):  
 $umount (dir)  
@@ -102,6 +102,7 @@ $sudo apt-get install lvm2 -y
 | pvscan | 搜尋目前系統裡面任何具有 PV 的磁碟 |  
 | pvdisplay | 顯示出目前系統上面的 PV 狀態 |  
 | pvremove | 將 PV 屬性移除，讓該 partition 不具有 PV 屬性 |  
+  
 EX:  
 查詢pv:  
 $sudo pvscan  
@@ -117,6 +118,7 @@ $sudo pvcreate /dev/sda1
 | vgreduce | 在 VG 內移除 PV |  
 | vgchange | 設定 VG 是否啟動 (active) |  
 | vgremove | 刪除一個 VG |  
+  
 EX:  
 創立vg:  
 $sudo vgcreate (vg-name) /dev/sda1  
@@ -132,6 +134,7 @@ $sudo vgscan
 | lvreduce | 在 LV 裡面減少容量 |  
 | lvremove | 刪除一個 LV |  
 | lvresize | 對 LV 進行容量大小的調整 |  
+  
 EX:  
 新增lv:  
 $sudo lvcreate -L 2G -n (lv-name) (vg-name)  
