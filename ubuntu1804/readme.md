@@ -92,6 +92,15 @@ $p
 $d  
 新增分割槽:  
 $n  
+1 enter  
+2 enter  
+3 enter  
+4 8E00  
+說明:  
+1 硬碟第幾位元做切割(1-128)  
+2 硬碟起始位置  
+3 硬碟終位置  
+4 格式  
 [LVM部分](http://linux.vbird.org/linux_basic/0420quota.php#LVM "link"):  
 安裝LVM:  
 $sudo apt-get install lvm2 -y  
