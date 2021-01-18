@@ -101,6 +101,8 @@ $n
 2 硬碟起始位置  
 3 硬碟終位置  
 4 格式  
+儲存並離開:  
+$w  
 [LVM部分](http://linux.vbird.org/linux_basic/0420quota.php#LVM "link"):  
 安裝LVM:  
 $sudo apt-get install lvm2 -y  
