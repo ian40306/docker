@@ -73,7 +73,7 @@ $sudo parted
 離開parted:  
 (parted)quit  
 將新分割區格式化:  
-$mkfs.ext4 /dev/sdb1  
+$sudo mkfs.ext4 /dev/sdb1  
 查詢硬碟之UUID:  
 $sudo blkid  
 掛載:  
