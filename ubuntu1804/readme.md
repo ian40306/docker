@@ -152,6 +152,7 @@ $sudo lvscan
 增大lv容量:  
 要先新增pv以及vg  
 $sudo lvresize -L +500M /dev/(vg-name)/(lv-name)  
+$resize2fs /dev/(vg-name)/(lv-name)  
 4.檔案系統階段  
 格式化:  
 $sudo mkfs.ext4 /dev/(vg-name)/(lv-name)  
