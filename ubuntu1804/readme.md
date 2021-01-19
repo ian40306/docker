@@ -85,7 +85,7 @@ $echo "UUID=4c025e0d-0303-4ba5-9b46-cdb4fc170926 /data          ext4    defaults
 卸載要使用的硬碟(會格式化):  
 $umount (dir)  
 切割欲使用硬碟:  
-$sudo gdisk /dev/sdb  
+$sudo gdisk /dev/sda  
 查看硬碟資訊:  
 $p  
 刪除硬碟內分割槽:  
@@ -133,6 +133,8 @@ $sudo pvcreate /dev/sda1
 EX:  
 創立vg:  
 $sudo vgcreate (vg-name) /dev/sda1  
+增加vg容量:  
+$sudo vgextend (vg-name) /dev/sda2  
 查詢vg:  
 $sudo vgscan  
 3.LV 階段  
@@ -154,6 +156,8 @@ $sudo lvscan
 增大lv容量:  
 要先新增pv以及vg  
 $sudo lvresize -L +500M /dev/(vg-name)/(lv-name)  
+或是  
+$sudo lvresize -l +100%FREE /dev/(vg-name)/(lv-name)  
 $resize2fs /dev/(vg-name)/(lv-name)  
 4.檔案系統階段  
 格式化:  
