@@ -55,6 +55,8 @@ $landscape-sysinfo
 ## 資料大小查詢
 $du -d 1 -h  
 ## ubuntu 硬碟掛載相關
+/dev 下面所有的硬碟情況  
+ls /dev/[sh]d*  
 安裝程式:  
 $sudo apt-get install parted  
 開啟程式:  
