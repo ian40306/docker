@@ -166,6 +166,10 @@ $sudo mkfs.ext4 /dev/(vg-name)/(lv-name)
 $sudo mkdir (dir)  
 掛載:  
 $sudo mount /dev/(vg-name)/(lv-name) (dir)  
+開機掛載:  
+vim /etc/fstab  
+新增以下:  
+/dev/(vg-name)/(lv-name) /data ext4 defaults 0 2
 ## 資料夾底下有多少資料
 $find . -name "*.jpg" -type f |wc -l
 ## 複製大量資料(test to train)
