@@ -82,7 +82,7 @@ $mount /dev/sdb1 /data
 $echo "UUID=4c025e0d-0303-4ba5-9b46-cdb4fc170926 /data          ext4    defaults        0       2" >> /etc/fstab  
 ### 使用lvm技術:  
 [硬碟部分](http://linux.vbird.org/linux_basic/0230filesystem.php#gdisk "link"):  
-卸載要使用的硬碟(會格式化):  
+卸載要使用的硬碟(要格式化硬碟再做):  
 $umount (dir)  
 切割欲使用硬碟:  
 $sudo gdisk /dev/sda  
