@@ -10,7 +10,7 @@ RUN echo "PermitRootLogin yes">>/etc/ssh/sshd_config
 RUN /etc/init.d/ssh restart
 RUN pip3 install --upgrade pip
 RUN pip install tensorflow-gpu==1.15.0
-RUN pip install jupyter
+RUN pip install jupyter jupyterlab
 RUN jupyter notebook --generate-config
 RUN pip install matplotlib pillow lxml pandas Cython opencv-python openpyxl
 RUN pip install scikit-image --upgrade
@@ -21,4 +21,5 @@ RUN echo "X11UseLocalhost no">> /etc/ssh/sshd_config
 RUN grep "^X11UseLocalhost" /etc/ssh/sshd_config || echo "X11UseLocalhost no" >> /etc/ssh/sshd_config
 RUN echo "service ssh start">>~/.bashrc
 RUN echo "alias python='/usr/bin/python3'">>~/.bashrc
+RUN echo "c.NotebookApp.terminado_settings = { 'shell_command': ['bash'] }">>/root/.jupyter/jupyter_notebook_config.py
 RUN service ssh start
