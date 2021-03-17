@@ -24,7 +24,7 @@ CUDA_VISIBLE_DEVICES=(number)
 number為第幾張GPU
 ## 使用 screen 讓指令在後台繼續執行
 安裝  
-$sudo apt install screen  
+$sudo apt install screen -y  
 查詢screen使用狀況  
 $screen -ls  
 切換screen介面  
