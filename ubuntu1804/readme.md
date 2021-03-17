@@ -28,7 +28,7 @@ $sudo apt install screen -y
 查詢screen使用狀況  
 $screen -ls  
 切換screen介面  
-$screen -r (number)  
+$screen -x (number)  
 ## 安裝pytorch1.0.0
 $pip install torch==1.0.0 torchvision==0.2.1  
 查詢版本:  
