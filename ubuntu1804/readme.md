@@ -178,6 +178,8 @@ vim /etc/fstab
 $find . -name "*.jpg" -type f |wc -l
 ## 複製大量資料(test to train)
 $find test/ -name "*.jpg" | xargs -i cp {} train
+## 複製n筆資料(test to train)
+$cp \`ls | head -n\` ../train
 ## 當前路徑中所有目錄所佔用大小做統計並且排序
 $du -chd 1 | sort -h
 ## 下載google drive檔案
