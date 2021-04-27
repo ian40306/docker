@@ -41,6 +41,8 @@ $pip install jupyterlab
 /root/.jupyter/jupyter_notebook_config.py 新增c.NotebookApp.terminado_settings = { 'shell_command': ['bash'] }  
 開啟:  
 $CUDA_VISIBLE_DEVICES=1 jupyter lab --ip=0.0.0.0 --allow-root 
+或是:  
+$jupyter lab --no-browser --port=8889
 ## 確認GPU是否支援
 tensorflow:  
 $python3 -c "import tensorflow as tf;print('Can your tensorflow use GPU?');print(tf.test.is_gpu_available());"  
