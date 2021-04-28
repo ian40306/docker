@@ -186,7 +186,10 @@ $cp \`ls | head -n\` ../train
 $du -chd 1 | sort -h
 ## 下載google drive檔案
 $wget --no-check-certificate -r 'https://docs.google.com/uc?export=download&id=[ID]' -O Filename  
--r 為資料夾(壓縮檔)，ID為google drive提供，Filename要與原檔案符合
+-r 為資料夾(壓縮檔)，ID為google drive提供
+## 下載onedrive檔案
+取得share_link後加上?download=1  
+$wget share_link?download=1 -O Filename  
 ## 顯示terminal print
 利用python執行x.py 並將print存到output.log中  
 $python x.py > output.log  
